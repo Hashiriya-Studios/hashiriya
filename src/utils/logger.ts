@@ -1,4 +1,4 @@
-import { Logger } from "tslog";
+import { Logger } from 'tslog';
 export default new Logger({
     exposeStack: false,
     displayFunctionName: false,
@@ -6,4 +6,4 @@ export default new Logger({
 
     dateTimePattern: 'year-day-month hour:minute',
     displayFilePath: 'displayAll'
-})
+});
