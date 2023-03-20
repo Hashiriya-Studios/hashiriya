@@ -3,6 +3,7 @@ import ratelimit from 'express-rate-limit';
 
 import { join } from 'path';
 import mainEndpoint from './routes/mainEndpoint';
+import errorEndpoint from './routes/errorEndpoint';
 
 const app = express();
 const rateLimit = ratelimit({
@@ -12,9 +13,10 @@ const rateLimit = ratelimit({
 });
 // Middleware
 app.use(rateLimit);
-app.use(express.static(join(process.cwd(), '../', 'resources')));
+app.use(express.static(join(process.cwd(), 'public')));
 
 // Endpoints
 app.use('/', mainEndpoint);
+app.use('*', errorEndpoint); // Error Endpoint
 
 export = app

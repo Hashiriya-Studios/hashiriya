@@ -1,0 +1,7 @@
+import express from 'express';
+
+import { join } from 'path';
+
+export default express.Router().get('/', (req, res) => {
+    res.status(404).sendFile(join(process.cwd(), 'public', 'resources', 'main.html'));
+});
