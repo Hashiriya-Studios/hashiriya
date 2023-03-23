@@ -15,8 +15,9 @@ const rateLimit = ratelimit({
     message: 'Too much requests.'
 });
 // Middleware
+app.set('view engine', 'ejs')
 app.use(rateLimit);
-app.use(express.static(join(process.cwd(), 'public')));
+app.use(express.static(join(process.cwd(), 'views')));
 
 // Endpoints
 app.use('/', mainEndpoint);
