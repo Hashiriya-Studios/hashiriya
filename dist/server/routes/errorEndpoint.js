@@ -4,8 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const path_1 = require("path");
 exports.default = express_1.default.Router().get('/', (req, res) => {
-    res.status(404).sendFile((0, path_1.join)(process.cwd(), 'public', 'resources', 'main.html'));
+    res.render('resources/main.ejs');
 });
 //# sourceMappingURL=errorEndpoint.js.map
