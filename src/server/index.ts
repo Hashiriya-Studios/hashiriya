@@ -1,7 +1,7 @@
 import express from 'express';
 import ratelimit from 'express-rate-limit';
 import logger from '../utils/logger';
-import morgan from 'morgan'
+import morgan from 'morgan';
 
 import { join } from 'path';
 
@@ -17,8 +17,8 @@ const rateLimit = ratelimit({
     message: 'Too much requests.'
 });
 // Middleware
-app.set('view engine', 'ejs')
-app.use(morgan('dev'))
+app.set('view engine', 'ejs');
+app.use(morgan('dev'));
 app.use(rateLimit);
 app.use(express.static(join(process.cwd(), 'views')));
 
