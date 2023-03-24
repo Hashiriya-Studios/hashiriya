@@ -1,0 +1,20 @@
+<head>
+    <%- include('../../partials/head') %>
+    <link rel="stylesheet" href="style/user/login.css">
+</head>
+
+<body>
+    <!--Snow-->
+    <%- include('../../partials/snow') %>
+        <div class="login" id="db">
+            <form action="/auth" method="post">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="text" name="u" id="user" placeholder="Username" required="required" />
+                <input type="password" id="password" name="p" placeholder="Password" required="required" />
+                <input type="submit" class="btn btn-primary btn-block btn-large"></button>
+            </form>
+        </div>
+</body>
